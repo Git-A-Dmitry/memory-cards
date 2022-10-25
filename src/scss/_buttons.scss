@@ -1,0 +1,38 @@
+h1 {
+  position: relative;
+
+  button {
+    position: absolute;
+    right: 0;
+    transform: translate(120%, -50%);
+    z-index: 2;
+  }
+}
+
+.btn {
+  cursor: pointer;
+  background-color: #a5d6a7;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-top: 20px;
+  padding: 10px 15px;
+}
+
+.btn-small {
+  font-size: 0.75rem;
+  padding: 5px 10px;
+}
+
+.btn-ghost {
+  border: 0;
+  // background-color: red;
+  background-color: transparent;
+}
+
+.clear {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  background-color: #ef6c00;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "memory-cards",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Git-A-Dmitry/memory-cards.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Git-A-Dmitry/memory-cards/issues"
+  },
+  "homepage": "https://github.com/Git-A-Dmitry/memory-cards#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
