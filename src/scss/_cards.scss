@@ -1,8 +1,8 @@
 .cards {
   perspective: 1000px;
   position: relative;
-  height: 300px;
-  width: 500px;
+  height: 320px;
+  width: 540px;
   max-width: 100%;
   background-color: lightgray;
 }
@@ -38,7 +38,7 @@
   width: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 0.4s ease;
+  transition: transform 0.8s ease;
 }
 
 .card.show-answer .inner-card {
@@ -57,6 +57,13 @@
   height: 100%;
   width: 100%;
   background: #fff;
+  padding: 0 20px;
+
+  p {
+    font-size: 1.3rem;
+    text-align: center;
+    color: #4e342e;
+  }
 }
 
 .inner-card-front {

@@ -11,18 +11,20 @@ h1 {
 
 .btn {
   cursor: pointer;
-  background-color: #a5d6a7;
-  border: 1px solid #aaa;
+  color: #fff;
+  background-color: #43a047;
+  border: none;
+  // border: 1px solid #aaa;
   border-radius: 3px;
   font-size: 1rem;
   margin-top: 20px;
   padding: 10px 15px;
 }
 
-.btn-small {
-  font-size: 0.75rem;
-  padding: 5px 10px;
-}
+// .btn-small {
+//   font-size: 0.75rem;
+//   padding: 10px 15px;
+// }
 
 .btn-ghost {
   border: 0;
@@ -30,9 +32,10 @@ h1 {
   background-color: transparent;
 }
 
-.clear {
+.btn-clear {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  background-color: #ef6c00;
+  background-color: #ff3d00;
+  border: none;
 }

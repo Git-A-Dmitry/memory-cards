@@ -1,5 +1,9 @@
 @import './buttons';
 @import './cards';
+@import './navigation';
+@import './newcard';
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@300;400;500&family=Courgette&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,5 +18,5 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
