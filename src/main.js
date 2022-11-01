@@ -12,6 +12,8 @@ const answerEl = document.getElementById('answer');
 const addCardBtn = document.getElementById('add-card');
 const clearBtn = document.getElementById('clear');
 const addContainer = document.getElementById('add-container');
+const clearCards = document.querySelector('.btn-clear');
+const modalButton = document.getElementById('id01');
 
 // Keep track of current card
 let currentActiveCard = 0;
@@ -66,6 +68,12 @@ export function updateCurrentText() {
 function getCardsData() {
   const cards = JSON.parse(localStorage.getItem('cards'));
   return cards === null ? [] : cards;
+}
+
+// Add card to local storage
+function setCardsData(cards) {
+  localStorage.setItem('cards', JSON.stringify(cards));
+  window.location.reload();
 }
 
 createCards();
@@ -125,4 +133,20 @@ addCardBtn.addEventListener('click', () => {
     cardsData.push(newCard);
     setCardsData(cardsData);
   }
+});
+
+// Clear cards button
+// function myFunction() {
+// clearBtn.style.display = 'block';
+//   alert('Hi');
+// }
+
+clearCards.onclick = function () {
+  modalButton.style.display = 'block';
+};
+
+clearBtn.addEventListener('click', () => {
+  localStorage.clear();
+  cardsContainer.innerHTML = '';
+  window.location.reload();
 });
