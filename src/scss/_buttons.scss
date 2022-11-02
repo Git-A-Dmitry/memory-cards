@@ -44,3 +44,12 @@ h1 {
 .btn-clear:hover {
   opacity: 1;
 }
+
+#delete {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  color: lightgrey;
+  z-index: 20;
+  cursor: pointer;
+}

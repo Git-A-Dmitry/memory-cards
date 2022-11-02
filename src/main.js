@@ -14,6 +14,7 @@ const clearBtn = document.getElementById('clear');
 const addContainer = document.getElementById('add-container');
 const clearCards = document.querySelector('.btn-clear');
 const modalButton = document.getElementById('id01');
+const delCurrentCard = document.getElementById('delete');
 
 // Keep track of current card
 let currentActiveCard = 0;
@@ -135,12 +136,6 @@ addCardBtn.addEventListener('click', () => {
   }
 });
 
-// Clear cards button
-// function myFunction() {
-// clearBtn.style.display = 'block';
-//   alert('Hi');
-// }
-
 clearCards.onclick = function () {
   modalButton.style.display = 'block';
 };
@@ -148,5 +143,13 @@ clearCards.onclick = function () {
 clearBtn.addEventListener('click', () => {
   localStorage.clear();
   cardsContainer.innerHTML = '';
+  window.location.reload();
+});
+
+// Delete a current card
+delCurrentCard.addEventListener('click', () => {
+  cardsData.splice(currentActiveCard, 1);
+  localStorage.setItem('cards', JSON.stringify(cardsData));
+
   window.location.reload();
 });
