@@ -1,21 +1,20 @@
-.container {
+.modal-container {
   padding: 16px;
   text-align: center;
 }
 
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 3;
   left: 0;
   right: 0;
+  top: 80;
   margin-left: auto;
   margin-right: auto;
   width: 60%;
   height: 62%;
   overflow: hidden;
-  // overflow: auto;
-  // background-color: #474e5d;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.7);
   padding-top: 50px;
