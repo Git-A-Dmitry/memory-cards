@@ -136,10 +136,12 @@ addCardBtn.addEventListener('click', () => {
   }
 });
 
+// Open modal
 clearCards.onclick = function () {
   modalButton.style.display = 'block';
 };
 
+// Delete all cards
 clearBtn.addEventListener('click', () => {
   localStorage.clear();
   cardsContainer.innerHTML = '';

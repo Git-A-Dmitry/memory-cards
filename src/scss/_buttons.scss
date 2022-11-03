@@ -2,9 +2,9 @@ h1 {
   position: relative;
 
   button {
-    position: absolute;
-    right: 0;
-    transform: translate(120%, -50%);
+    // position: absolute;
+    // right: 0;
+    // transform: translate(120%, -50%);
     z-index: 2;
   }
 }
@@ -14,28 +14,33 @@ h1 {
   color: #fff;
   background-color: #43a047;
   border: none;
-  // border: 1px solid #aaa;
   border-radius: 3px;
   font-size: 1rem;
   margin-top: 20px;
   padding: 10px 15px;
 }
 
-// .btn-small {
-//   font-size: 0.75rem;
-//   padding: 10px 15px;
-// }
-
 .btn-ghost {
+  // position: absolute;
+  // top: 190;
+  // right: 380;
   border: 0;
-  // background-color: red;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
   background-color: transparent;
+}
+
+.btn-small {
+  position: absolute;
+  top: 0;
+  right: 140;
 }
 
 .btn-clear {
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  top: 0px;
+  right: 30px;
   background-color: #ff3d00;
   border: none;
   opacity: 0.9;

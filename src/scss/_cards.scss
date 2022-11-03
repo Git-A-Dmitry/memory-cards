@@ -1,4 +1,14 @@
+.container {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .cards {
+  // margin: auto;
   perspective: 1000px;
   position: relative;
   height: 320px;
@@ -33,7 +43,6 @@
 
 .inner-card {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-  border-radius: 4px;
   height: 100%;
   width: 100%;
   position: relative;
@@ -56,13 +65,16 @@
   justify-content: center;
   height: 100%;
   width: 100%;
-  background: #fff;
+  background: #424242;
+  // background: #fff;
   padding: 0 20px;
+  border-radius: 8px;
 
   p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     text-align: center;
-    color: #4e342e;
+    color: #ddd;
+    // color: #4e342e;
   }
 }
 
