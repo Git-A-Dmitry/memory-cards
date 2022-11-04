@@ -16,11 +16,15 @@ const clearCards = document.querySelector('.btn-clear');
 const modalButton = document.getElementById('id01');
 const delCurrentCard = document.getElementById('delete');
 
+const knownCard = document.getElementById('known');
+const learnedCards = document.getElementById('show-known');
+
 // Keep track of current card
 let currentActiveCard = 0;
 
 // Store DOM cards
 const cardsEl = [];
+const iKnowThisCards = [];
 
 // Store card data
 const cardsData = getCardsData();
@@ -61,7 +65,7 @@ function createCard(data, index) {
 }
 
 // Show number of cards
-export function updateCurrentText() {
+function updateCurrentText() {
   currentEl.innerText = `${currentActiveCard + 1} / ${cardsEl.length}`;
 }
 
@@ -155,3 +159,14 @@ delCurrentCard.addEventListener('click', () => {
 
   window.location.reload();
 });
+
+// knownCard.addEventListener('click', () => {
+//   iKnowThisCards.push(cardsData[currentActiveCard]);
+//   console.log(iKnowThisCards);
+//   localStorage.setItem('known-cards', JSON.stringify(iKnowThisCards[currentActiveCard]));
+// });
+
+// learnedCards.addEventListener('click', () => {
+//   const newCards = JSON.parse(localStorage.getItem('known-cards'));
+//   return newCards === null ? [] : newCards;
+// });
