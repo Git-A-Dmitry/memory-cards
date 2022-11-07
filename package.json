@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html"
+    "build": "parcel build src/index.html --out-dir build",
+    "dev": "parcel ./src/index.html",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,10 @@
   "bugs": {
     "url": "https://github.com/Git-A-Dmitry/memory-cards/issues"
   },
-  "homepage": "https://github.com/Git-A-Dmitry/memory-cards#readme",
+  "homepage": "https://git-a-dmitry.github.io/memory-cards",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.7.0",
+    "gh-pages": "^4.0.0",
     "parcel": "^2.7.0"
   }
 }
