@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/eac214047d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/normalize.css" />
     <link rel="stylesheet" href="./scss/main.scss" />
     <title>Document</title>
   </head>
   <body>
     <div class="navbar">
       <h2>Memory Cards</h2>
-      <button id="show" class="btn btn-small"><i class="fas fa-plus"></i> New Card</button>
-      <button class="btn btn-clear"><i class="fas fa-trash"></i> Delete</button>
+      <button id="show" class="btn btn-new-card"><i class="fas fa-plus"></i> New Card</button>
+      <button class="btn btn-delete"><i class="fas fa-trash"></i> Delete</button>
     </div>
 
     <div class="container">
@@ -37,7 +38,7 @@
             </div>
           </div>
         </div> -->
-        <i id="delete" class="fas fa-trash"></i>
+        <i id="del-current" class="fas fa-trash"></i>
       </div>
     </div>
 
@@ -54,15 +55,14 @@
       </button>
     </div>
 
-    <!-- Add New Card -->
+    <!-- New Card -->
     <div id="add-container" class="add-container">
       <!-- <div id="add-container" class="add-container show"> -->
-      <div class="add-container_title">
-        <h1>Add New Card</h1>
-        <button id="hide" class="btn btn-small btn-ghost">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
+      <h1>New Card</h1>
+
+      <!-- <button id="hide" class="btn btn-cross">
+        <i class="fas fa-times"></i>
+      </button> -->
 
       <div class="add-container__form-group">
         <label for="question">Question</label>
@@ -74,25 +74,22 @@
         <textarea id="answer" placeholder="Enter answer..."></textarea>
       </div>
 
-      <button id="add-card" class="btn">
-        <i class="fas fa-plus"> Add Card</i>
-      </button>
+      <div class="add-container__buttons">
+        <button id="hide" class="btn btn-back">Go Back</button>
+        <button id="add-card" class="btn btn-add-card"><i class="fas fa-plus"></i> Add Card</button>
+      </div>
     </div>
 
-    <!-- Delete Confirmation Modal  -->
-    <!-- <button class="btn btn-clear"><i class="fas fa-trash"></i> Delete</button> -->
-    <!-- <button class="btn btn-clear" onclick="document.getElementById('id01').style.display='block'"><i class="fas fa-trash"></i> Clear Cards</button> -->
-
-    <div id="id01" class="modal">
-      <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
-
-      <form class="modal-content" action="">
-        <div class="modal-container">
+    <!-- Confirmation Modal  -->
+    <div id="clear-all" class="modal">
+      <!-- <span onclick="document.getElementById('clear-all').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+      <form class="modal__content" action="">
+        <div class="modal__box">
           <h1>Delete Cards</h1>
           <p>Are you sure you want to delete all your cards?</p>
 
           <div class="clearfix">
-            <button type="button" class="cancelbtn" onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            <button id="cancel" type="button" class="cancelbtn">Cancel</button>
             <button id="clear" type="button" class="deletebtn">Delete</button>
           </div>
         </div>

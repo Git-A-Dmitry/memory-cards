@@ -1,4 +1,3 @@
-// import updateCurrentText from './scripts/updateCurrentText';
 // import { cardsData } from './scripts/cardsData';
 
 const cardsContainer = document.getElementById('cards-container');
@@ -12,9 +11,10 @@ const answerEl = document.getElementById('answer');
 const addCardBtn = document.getElementById('add-card');
 const clearBtn = document.getElementById('clear');
 const addContainer = document.getElementById('add-container');
-const clearCards = document.querySelector('.btn-clear');
-const modalButton = document.getElementById('id01');
-const delCurrentCard = document.getElementById('delete');
+const clearCards = document.querySelector('.btn-delete');
+const modalButton = document.getElementById('clear-all');
+const delCurrentCard = document.getElementById('del-current');
+const cancelDelete = document.getElementById('cancel');
 
 // Keep track of current card
 let currentActiveCard = 0;
@@ -139,6 +139,10 @@ addCardBtn.addEventListener('click', () => {
 // Open modal
 clearCards.onclick = function () {
   modalButton.style.display = 'block';
+};
+
+cancelDelete.onclick = function () {
+  modalButton.style.display = 'none';
 };
 
 // Delete all cards
