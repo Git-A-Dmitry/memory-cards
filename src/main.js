@@ -88,7 +88,7 @@ nextBtn.addEventListener('click', () => {
   if (currentActiveCard > cardsEl.length - 1) {
     currentActiveCard = cardsEl.length - 1;
   }
-  // У нас карты начинаются с единицы, а массив cardsEl начинается с нуля, поэтому мы от длины массива вычитаем 1.
+  // Карты начинаются с единицы, а массив cardsEl начинается с нуля, поэтому от длины массива вычитаем 1.
 
   cardsEl[currentActiveCard].className = 'card active';
 

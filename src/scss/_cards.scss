@@ -31,8 +31,12 @@
   left: 0;
   height: 100%;
   width: 100%;
-  transform: translateX(50%) rotateY(-20deg);
+  // transform: translateY(50%) rotateY(-80deg);
   transition: transform 0.5s ease, opacity 0.5s ease;
+
+  @media (min-width: 530px) {
+    transform: translateX(50%) rotateY(-20deg);
+  }
 }
 
 .card.active {
@@ -43,7 +47,11 @@
 }
 
 .card.left {
-  transform: translateX(-50%) rotateY(10deg);
+  transform: translateY(50%) rotateY(100deg);
+
+  @media (min-width: 530px) {
+    transform: translateX(-50%) rotateY(10deg);
+  }
 }
 
 .inner-card {
@@ -76,10 +84,8 @@
   border-radius: 8px;
 
   p {
-    font-size: 1.6rem;
     text-align: center;
     color: #ddd;
-    // color: #4e342e;
   }
 }
 
@@ -90,6 +96,13 @@
 
 .inner-card-back {
   transform: rotateX(180deg);
+  font-size: 1.3rem;
+  overflow-y: scroll;
+  // scrollbar-width: none;
+}
+
+.inner-card-back::-webkit-scrollbar {
+  display: none;
 }
 
 .inner-card-front::after,
